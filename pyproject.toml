@@ -1,0 +1,18 @@
+[build-system]
+requires = ["scikit-build-core", "pybind11"]
+build-backend = "scikit_build_core.build"
+
+
+[project]
+name = "discrete-graphs"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.1",
+    "networkx>=3.6.1",
+    "typer>=0.27.2",
+]
+
+[tool.scikit-build]
+cmake.build-type = "Release"
+wheel.packages = ["src/discrete_app"]
