@@ -1,0 +1,36 @@
+{
+  "directed": false,
+  "nodes": [
+    {"id": 0, "label": "Pr_1"},
+    {"id": 1, "label": "Pr_2"},
+    {"id": 2, "label": "Pr_3"},
+    {"id": 3, "label": "Pr_4"},
+    {"id": 4, "label": "Pr_5"},
+    {"id": 5, "label": "Pr_6"},
+    {"id": 6, "label": "Pr_7"},
+    {"id": 7, "label": "Pr_8"},
+    {"id": 8, "label": "Pr_9"},
+    {"id": 9, "label": "Pr_10"},
+    {"id": 10, "label": "Pr_11"},
+    {"id": 11, "label": "Pr_12"}
+  ],
+  "edges": [
+    {"source": 0, "target": 1},
+    {"source": 0, "target": 2},
+    {"source": 1, "target": 3},
+    {"source": 1, "target": 3},
+    {"source": 2, "target": 4},
+    {"source": 2, "target": 5},
+    {"source": 3, "target": 6},
+    {"source": 4, "target": 6},
+    {"source": 4, "target": 7},
+    {"source": 5, "target": 7},
+    {"source": 5, "target": 8},
+    {"source": 6, "target": 9},
+    {"source": 7, "target": 9},
+    {"source": 7, "target": 10},
+    {"source": 8, "target": 10},
+    {"source": 9, "target": 11},
+    {"source": 10, "target": 11}
+  ]
+}
