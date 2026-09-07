@@ -1,0 +1,35 @@
+{
+  "directed": false,
+  "nodes": [
+    {"id": 0, "label": "SE_1"},
+    {"id": 1, "label": "SE_2"},
+    {"id": 2, "label": "SE_3"},
+    {"id": 3, "label": "SE_4"},
+    {"id": 4, "label": "SE_5"},
+    {"id": 5, "label": "SE_6"},
+    {"id": 6, "label": "SE_7"},
+    {"id": 7, "label": "SE_8"},
+    {"id": 8, "label": "SE_9"},
+    {"id": 9, "label": "SE_10"},
+    {"id": 10, "label": "SE_11"},
+    {"id": 11, "label": "SE_11"},
+    {"id": 12, "label": "SE_11"}
+  ],
+  "edges": [
+    {"source": 0, "target": 1},
+    {"source": 1, "target": 2},
+    {"source": 1, "target": 3},
+    {"source": 2, "target": 3},
+    {"source": 3, "target": 4},
+    {"source": 4, "target": 5},
+    {"source": 4, "target": 6},
+    {"source": 5, "target": 6},
+    {"source": 6, "target": 7},
+    {"source": 7, "target": 8},
+    {"source": 8, "target": 9},
+    {"source": 8, "target": 10},
+    {"source": 9, "target": 10},
+    {"source": 10, "target": 11},
+    {"source": 11, "target": 12}
+  ]
+}
