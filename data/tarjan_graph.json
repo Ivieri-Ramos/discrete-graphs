@@ -12,8 +12,8 @@
     {"id": 8, "label": "SE_9"},
     {"id": 9, "label": "SE_10"},
     {"id": 10, "label": "SE_11"},
-    {"id": 11, "label": "SE_11"},
-    {"id": 12, "label": "SE_11"}
+    {"id": 11, "label": "SE_12"},
+    {"id": 12, "label": "SE_13"}
   ],
   "edges": [
     {"source": 0, "target": 1},
