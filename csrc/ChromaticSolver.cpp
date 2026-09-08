@@ -11,6 +11,7 @@ namespace {
         std::vector<int64_t> colors;
         std::vector<int64_t> order;
 
+        // a atribuição de cor ocorre sequencialmente em cada vértice avaliando colisões contra os vizinhos diretos previamente resolvidos no array
         [[nodiscard]] bool is_safe(const int64_t u, const int64_t color) const {
             for (const int64_t neighbor : graph.get_neighbors(u)) {
                 if (colors[neighbor] == color) {
@@ -36,6 +37,7 @@ namespace {
                         return true;
                     }
 
+                    // ao atingir um estado sem saída onde nenhuma cor é válida, a recursão retrocede, anulando a pintura da etapa anterior e tentando alocar a próxima cor segura da paleta
                     colors[u] = -1;
                 }
             }
@@ -52,6 +54,7 @@ namespace {
 
             std::iota(order.begin(), order.end(), 0);
 
+            // o motor heurístico reordena o array de vértices analisando a quantidade de conexões, processando os nós de maior grau precocemente para forçar falhas rápidas na árvore de busca e economizar processamento
             std::sort(order.begin(), order.end(), [&graph](const int64_t u, const int64_t v) {
                 return graph.get_vertex_degree(u) > graph.get_vertex_degree(v);
             });
@@ -62,6 +65,7 @@ namespace {
                 return {};
             }
 
+            // uma restrição crescente controla o uso de cores, começando a busca com o limite de apenas uma cor e incrementando o teto gradualmente apenas quando todas as combinações anteriores falham
             for (int64_t num_colors = 1; num_colors <= total_vertices; num_colors++) {
                 std::fill(colors.begin(), colors.end(), -1);
 
