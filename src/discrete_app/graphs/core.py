@@ -114,6 +114,8 @@ def plot_tarjan_result(
         node_size=700,
         edgecolors="#222222"
     )
+    nx.draw_networkx_labels(nx_graph, pos, labels=labels, ax=axes[0], font_size=10, font_weight="bold")
+
     axes[1].set_title(f"Rede Fracionada ({len(components)} Componentes Conexas)", fontsize=13, fontweight="bold")
 
     operating_nodes = [n for n in nx_graph.nodes() if n not in cut_set]
